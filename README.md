@@ -1,2 +1,2 @@
-# site
-Site da comunidade Svelte Brasil
+# Boilerplate
+Sapper configurated with sass, storybook, dotenv and prettier
