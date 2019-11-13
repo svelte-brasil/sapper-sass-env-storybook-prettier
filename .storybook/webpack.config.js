@@ -1,4 +1,3 @@
-const { aliases } = require("../webpack.parts");
 const merge = require("webpack-merge");
 
 module.exports = ({ config, mode }) => {
@@ -20,7 +19,7 @@ module.exports = ({ config, mode }) => {
       ]
     }
   });
-  mergedConfig.resolve.alias = { ...mergedConfig.resolve.alias, ...aliases };
+  mergedConfig.resolve.alias = { ...mergedConfig.resolve.alias };
 
   return mergedConfig;
 };
