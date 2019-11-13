@@ -1,5 +1,4 @@
 <style lang="scss">
-  @import '../styles/_colors';
   h1,
   figure,
   p {

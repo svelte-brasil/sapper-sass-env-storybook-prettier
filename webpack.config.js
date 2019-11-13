@@ -38,7 +38,11 @@ module.exports = {
           use: {
             loader: "svelte-loader",
             options: {
-              preprocess: require("svelte-preprocess")([scss()]),
+              preprocess: require("svelte-preprocess")({
+                scss: {
+                  data: `@import '../styles/variables.scss';`
+                }
+              }),
               dev,
               hydratable: true,
               hotReload: true
@@ -73,7 +77,11 @@ module.exports = {
           use: {
             loader: "svelte-loader",
             options: {
-              preprocess: require("svelte-preprocess")([scss()]),
+              preprocess: require("svelte-preprocess")({
+                scss: {
+                  data: `@import '../styles/variables.scss';`
+                }
+              }),
               css: false,
               generate: "ssr",
               dev

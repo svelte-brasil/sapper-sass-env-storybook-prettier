@@ -27,6 +27,7 @@
           text-decoration: none;
           padding: 1em 0.5em;
           display: block;
+          color: $green-br;
 
           &.selected {
             position: relative;
@@ -37,7 +38,7 @@
               content: '';
               width: calc(100% - 1em);
               height: 2px;
-              background-color: rgb(255, 62, 0);
+              background-color: $blue-br;
               display: block;
               bottom: -1px;
             }

@@ -1,4 +1,4 @@
-const { aliases, scssAliases } = require("../webpack.parts");
+const { aliases } = require("../webpack.parts");
 const merge = require("webpack-merge");
 
 module.exports = ({ config, mode }) => {
@@ -12,7 +12,7 @@ module.exports = ({ config, mode }) => {
           options: {
             preprocess: require("svelte-preprocess")({
               scss: {
-                importer: [scssAliases(aliases)]
+                data: `@import '../styles/variables.scss';`
               }
             })
           }
@@ -21,6 +21,6 @@ module.exports = ({ config, mode }) => {
     }
   });
   mergedConfig.resolve.alias = { ...mergedConfig.resolve.alias, ...aliases };
-  //console.dir(mergedConfig, {depth: null});
+
   return mergedConfig;
 };
