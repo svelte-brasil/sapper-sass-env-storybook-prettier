@@ -40,7 +40,7 @@ module.exports = {
             options: {
               preprocess: require("svelte-preprocess")({
                 scss: {
-                  data: `@import '../styles/variables.scss';`
+                  data: `@import './src/styles/variables.scss';`
                 }
               }),
               dev,
@@ -79,7 +79,7 @@ module.exports = {
             options: {
               preprocess: require("svelte-preprocess")({
                 scss: {
-                  data: `@import '../styles/variables.scss';`
+                  data: `@import './src/styles/variables.scss';`
                 }
               }),
               css: false,
